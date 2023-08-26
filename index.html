@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Portfolio</title>
+
+    <link rel="stylesheet" href="estilo.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <script type="text/javascript">
+      emailjs.init("KXtxpn1P2PaWskZnW");
+    </script>
+  </head>
+  <body>
+    <!-- SECCION INICIO -->
+    <section id="inicio">
+      <div class="contenido">
+        <header>
+          <div class="contenido-header">
+            <h1>-RP-</h1>
+            <nav id="nav" class="">
+              <ul id="links">
+                <li>
+                  <a
+                    href="#inicio"
+                    class="seleccionado"
+                    onclick="seleccionar(this)"
+                    >INICIO</a
+                  >
+                </li>
+                <li>
+                  <a href="#sobremi" onclick="seleccionar(this)">SOBRE MI</a>
+                </li>
+                <li>
+                  <a href="#servicios" onclick="seleccionar(this)">SERVICIOS</a>
+                </li>
+                <li>
+                  <a href="#portfolio" onclick="seleccionar(this)"
+                    >PORTAFOLIO</a
+                  >
+                </li>
+                <li>
+                  <a href="#contacto" onclick="seleccionar(this)">CONTACTO</a>
+                </li>
+              </ul>
+            </nav>
+
+            <!== Iconos del menu responsive ==>
+            <div id="icono-nav" onclick="responsiveMenu()">
+              <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!== Iconos de las redes sociales ==>
+            <div class="redes">
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+              <a href=""><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+        </header>
+        <div class="presentacion">
+          <p class="bienvenida">Bienvenidos</p>
+          <h2>Soy <span>Rodrigo Perez</span>, FullStack Developer</h2>
+          <p class="descripcion">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio
+            minima officiis ipsam nemo nulla dolore ea possimus? Perspiciatis
+            unde aperiam sed sint sit eos eligendi repudiandae perferendis.
+          </p>
+          <a href="#portfolio">Ir al Portafolio</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION SOBRE MI -->
+    <section id="sobremi">
+      <div class="contenedor-foto">
+        <img src="images/Rodrigo.jpg" alt="" />
+      </div>
+      <div class="sobremi">
+        <p class="titulo-seccion">Sobre Mi</p>
+        <h2>Hola, soy <span>Rodrigo Perez</span></h2>
+        <h3>Desarrollador web</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+          ullam adipisci tempore incidunt praesentium possimus eius asperiores
+          nulla expedita nam quos, architecto aut tempora.
+        </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <a href="#">Descargar CV</a>
+      </div>
+    </section>
+
+    <!-- SECCION SERVIVIOS -->
+    <section id="servicios">
+      <h3 class="titulo-seccion">MIS SERVICIOS</h3>
+      <div class="fila">
+        <div class="servicio">
+          <span class="icono"><i class="fa-solid fa-code"></i></span>
+          <h4>Desarrolador Web</h4>
+          <hr />
+          <ul class="servicios-tag">
+            <li>Frontend</li>
+            <li>Backend</li>
+          </ul>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+            eius, enim aliquid dignissimos alias sed nisi? Molestiae blanditiis
+            eos consequatur odit! Voluptates suscipit beatae doloremque velit
+            repellat.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCION SKILLS -->
+    <div class="contenedor-skills" id="skills">
+      <h3>SKILLS</h3>
+      <div class="skill">
+        <div class="info">
+          <p><span class="list"></span>React</p>
+          <span class="porcentaje">80%</span>
+        </div>
+        <div class="barra">
+          <div id="react" class=""></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="info">
+          <p><span class="list"></span>Redux</p>
+          <span class="porcentaje">80%</span>
+        </div>
+        <div class="barra">
+          <div id="redux" class=""></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="info">
+          <p><span class="list"></span>Html & Css</p>
+          <span class="porcentaje">80%</span>
+        </div>
+        <div class="barra">
+          <div id="html" class=""></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="info">
+          <p><span class="list"></span>Javascript</p>
+          <span class="porcentaje">75%</span>
+        </div>
+        <div class="barra">
+          <div id="js" class=""></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SECCION PORTAFOLIO -->
+    <section id="portfolio">
+      <h3 class="titulo-seccion">MIS PROYECTOS</h3>
+      <div class="fila">
+        <div class="proyecto">
+          <div class="overlay"></div>
+          <img src="/images/pi-foods.jpg" alt="" />
+          <div class="info">
+            <h4>Descripción del Proyecto</h4>
+            <p>Proyecto Individual - Foods</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- SECCION CONTACTO -->
+    <section id="contacto">
+      <h3 class="titulo-seccion">Contactame ahora</h3>
+      <div class="contenedor-form">
+        <form action="" id="form">
+          <div class="fila mitad">
+            <input
+              type="text"
+              placeholder="Nombre Completo"
+              class="input-mitad"
+              name="from_name"
+              id="from_name"
+            />
+            <input
+              type="text"
+              placeholder="Direccion de correo"
+              class="input-mitad"
+              name="email_id"
+              id="email_id"
+            />
+          </div>
+          <div class="fila">
+            <textarea
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Tu Mensaje..."
+              class="input-full"
+              name="message"
+            ></textarea>
+          </div>
+          <input
+            type="submit"
+            id="button"
+            value="Enviar Mensaje"
+            class="btn-enviar"
+          />
+        </form>
+      </div>
+    </section>
+
+    <!-- SECCION FOOTER -->
+    <footer>
+      <p>Todos los derechos reservados - 2023</p>
+      <div class="redes">
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        <a href=""><i class="fa-brands fa-github"></i></a>
+      </div>
+    </footer>
+    <script src="scrip.js"></script>
+  </body>
+</html>
